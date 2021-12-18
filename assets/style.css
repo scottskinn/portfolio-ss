@@ -1,35 +1,37 @@
 * {
     margin: 0%;
-    padding: 0;
+    /* padding: 0; */
     box-sizing: border-box;
 }
 /*header styles*/
-header {
-    padding: 20px 35px;
-    /* background-image: url("./images/night-sky.jpeg");     */
-    justify-content: space-between;
-    flex-wrap: wrap;
-    display: flex;
+#name {
+    /* display: flex; */
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
     color: black;
+    text-align: center;
+    margin-top: 10px;
 }
-header nav {
-    margin: 7px 0;
+
+nav {
+    margin: 15px 0;
 }
-header nav ul {
+nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: ;
     list-style: none;
 }
-header nav ul li a {
+nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 20px;
     color: black;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
-header nav ul li a:hover {
-    background-color: green;
+nav ul li a:hover {
+    background-color: blue;
     color: yellow;
     border-radius: 10px;
 }
@@ -47,9 +49,12 @@ body {
 #bio-image {
     width: 200px;
     height: 250px;
-    flex-wrap: wrap;
+    border-radius: 50%;
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
 }
+
 #bio-image:hover {
   box-shadow: 2px 2px 2px 1px rgba(24, 133, 5, 0.5)
 }
@@ -58,50 +63,51 @@ body {
 .wrapper {
     display: flex;
     flex-direction: row;
-    margin: 10px;  
-    border: 5px, solid black;  
+    margin: 10px; 
 }
 
-#About-Me {
+
+#description {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding-right: 10px;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    width: 100%;
 }
-#About-Me h2 {
+
+#About-Me, #My-Work, #Contact-Me, #Resume {
+    display: row;
+    margin: 20px auto;
+}
+/* #About-Me h2 {
     padding-right: 20px;
     border-right: 5px solid blue;
-}
+} */
 #About-Me p {
-    padding-left: 20px;
+    padding: 20px 60px;
 }
 
-#My-Work {
-    display: flex;
 }
 #My-Work h2 {
     width: 150px;
     padding-right: 75px;
-    border-right: 5px solid blue;
 }
 #My-Work .flex-container {
     padding-left: 20px;
 }
-
-#Contact-Me {
-    display: flex;
+#My-Work .flex-container p {
+    padding: 20px;
 }
 #Contact-Me h2 {
     padding-right: 20px;
-    border-right: 5px solid blue; 
-}
-#Contact-Me address {
-    padding-left: 20px;
 }
 
-#Resume {
-    display: flex;
-}
 #Resume h2 {
     padding-right: 20px;
-    border-right: 5px solid blue;
 }
 #Resume p {
     padding-left: 20px;
@@ -118,7 +124,8 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-self: center;
-    margin: 20px;
+    width: 100%;
+    /* margin: 20px; */
   }
 
 .flex-item {
@@ -142,20 +149,31 @@ body {
 
 .flex-item span {
     margin: 0;
-    margin-bottom: 25px;
-    width: 33%;
+    width: 100%;
     background-color: rgba(14, 123, 212, 0.5);
     padding: 5px 10px;
     text-align: center;
     z-index: 9999;
 }
 
-/* .work-img {
-    height: 250px;
-} */
+#github {
+    justify-content: center;
+}
+
+/* Contact */
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
 /*footer syles*/
-footer h2 {
+/* footer h2 {
     font-size: 30px;
     text-align: center;
     position: bottom;
@@ -164,7 +182,7 @@ footer h2 {
     border: 3px solid rgba(14, 123, 212, 0.5);
     color: whitesmoke;
 
-}
+} */
 
 
 /* Media queries for the following screen sizes */

@@ -8,35 +8,38 @@
         <title>Scott Skinn's Bio</title>
     </head>
     <body>
-        <header>
+        
+        <div id="name">
             <h1>
                 Scott Skinn
             </h1>
-            <img id="bio-image" src="assets/images/head shot.jpg" alt="scott skinn">
+        </div>        
+    
+        <nav>
+            <ul>
+                <li>
+                    <a href="#About-Me">About Me</a>
+                </li>
+                <li>
+                    <a href="#My-Work">My Work</a>
+                </li>
+                <li>
+                    <a href="#Contact-Me">Contact Me</a>
+                </li>
+                <li>
+                    <a href="#Resume">Resume</a>
+                </li>
+            </ul>
+        </nav>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#About-Me">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#My-Work">My Work</a>
-                    </li>
-                    <li>
-                        <a href="#Contact-Me">Contact Me</a>
-                    </li>
-                    <li>
-                        <a href="#Resume">Resume</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <img id="bio-image" src="assets/images/head shot.jpg" alt="scott skinn">
+        
     
         <section class="wrapper col">
 
             <section class="main">
-                <div id="About-Me">
-                    <h2>About Me</h2>
+                <div id="About-Me" class="flex-container">
+                    <h2 id="description">About Me</h2>
                     <p>
                     Hello everyone!</br>
                     My name is Scott and welcome to my profile page! I am currently enrolled at Carlton University in one of their coding boot camps. I have been learning to code and all the other aspects that come with it for a couple months now. So far I am really enjoying it! Previously, I was working as a machinist for approximately ten years. I have always loved making things but wanted a different career for myself. Thus far, web development seems like it could be a good fit for me. Here is a showcase of my work so far.  </br>  
@@ -45,7 +48,7 @@
                 </br>
 
                 <div id="My-Work">
-                    <h2>Group Projects</h2>
+                    <h2 id="description">Group Projects</h2>
                     <div class="flex-container">
                         <div class="flex-item">
                             <a href=https://askarrizvi.github.io/project1/ target="_blank"> <img src="./assets/images/pixaradar.jpg" class="imgclass"></a>
@@ -60,7 +63,7 @@
                 </div>
 
                 <div id="My-Work">
-                    <h2>My Work</h2>
+                    <h2 id="description">My Work</h2>
                     <div class="flex-container">
                         <div class="flex-item col-md-10">
                             <a href=https://scottskinn.github.io/run-buddy target="_blank"> <img src="./assets/images/Run-buddy.jpg" class="imgclass"></a>
@@ -86,36 +89,50 @@
                 </div>
 
                 <div id="My-Work">
-                    <h2>GitHub</h2>
+                    <h2 id="description">GitHub</h2>
                     <div class="flex-container">
-                        <div class="flex-item">
+                        <div id='github' class="flex-item">
                             <a href=https://github.com/scottskinn target="_blank"> <img src="./assets/images/Github-Screenshot.jpg" class="imgclass"></a>
                         <span>GitHub Profile</span>
                         </div>
                     </div>
                 </div>
                 
-                <div id="Contact-Me">
-                    <h2>Contact Me</h2>
-                    <address>
-                        P: <a href="tel:519.590.0358">Cell#: 519-590-0358</a> </br>
-                        E-mail: <a href="mailto:scottskinn@hotmail.com">scottskinn@hotmail.com</a>
-                    </address>
-                </div>
-
-                </br>
-                <div id="Resume">
-                    <h2>Resume</h2>
+                <div id="Resume" class="flex-container">
+                    <h2 id="description">Resume</h2>
                     <p>I dont have one but i will soon!</p>
                 </div>
+
+                <div id="Contact-Me" class="flex-container">
+                    <h2 id="description">Contact Me</h2>
+                    <div">
+                        <form id='contact-form' onSubmit={handleSubmit}>
+                            <div>
+                                <label htmlFor='name'>Name:</label>
+                                <input type='text' defaultValue={name} onBlur={handleChange} name='name' />
+                            </div>
+                            <div>
+                                <label htmlFor='email' name='email'>Email address:</label>
+                                <input type='email' defaultValue={email} onBlur={handleChange} name='email' />
+                            </div>
+                            <div>
+                                <label htmlFor='message'>Message:</label>
+                                <textarea name='message' defaultValue={message} onBlur={handleChange} rows='5' />
+                            </div>
+                            <button type='submit'>Send</button>
+                        </form>
+                    </div>
+                </div>
+
             </section>
         </section>
-    
-    
-        <section>
-            <footer>
-            <h2> Made by Scott Skinn</h2>
+
+        
+        <div>
+            <footer id='description'>
+                <h2> Made by Scott Skinn</h2>
             </footer>
-        </section>
+        </div>
+        
     </body>
 </html>
